@@ -14,9 +14,9 @@ const MainHeader = () => {
             <p className="text-sm fontbold w-2/3">Bringing the taste of Italy to your kitchen. Explore new flavors, techniques, and ingredients with our rich collection of recipes and resources</p>
           </div>
         </div>
-        <div className="relative my-10">
+        <div className="relative mt-10 mb-24 ">
           <img style={{width:'15rem',height:'15rem'}}
-            className=" shadow-xl shadow-black object-cover absolute top-20 right-24 image-full rounded-lg "
+            className=" shadow-xl shadow-black object-cover absolute top-11 right-11 md:top-20 md:right-24 image-full rounded-lg "
             src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/05/chef-cooking.jpg?quality=82&strip=1"
             alt=""
           />
