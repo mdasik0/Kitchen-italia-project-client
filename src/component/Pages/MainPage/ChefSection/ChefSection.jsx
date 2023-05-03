@@ -4,9 +4,9 @@ import { FaThumbsUp } from 'react-icons/fa';
 
 const ChefSection = () => {
   return (
-    <div className="md:pb-20 md:pt-10 px-3 mx-0 md:mx-28">
+    <div className="md:pb-6 md:pt-10 px-3 mx-0 md:mx-28">
       {/* decoration */}
-      <div className="flex items-center justify-center my-6">
+      <div className="flex items-center justify-center md:mb-20 mb-6 my-6">
         <div style={{ height: "1px" }} className=" w-32 bg-slate-800 mr-2">
           {" "}
         </div>
@@ -21,7 +21,7 @@ const ChefSection = () => {
         </div>
       </div>
       {/* chef card container */}
-      <div className="grid grid-cols-1 md:grid-cols-3">
+      <div className="grid mb-3 md:mb-10 grid-cols-1 md:grid-cols-3">
         {/* chef cards */}
 
         <div className="card card-side border-2 border-red-300  shadow-xl">
