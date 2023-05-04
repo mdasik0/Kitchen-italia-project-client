@@ -11,10 +11,11 @@ const ChefDetails = () => {
   // recipe data here
   const [recipeData, setRecipeData] = useState([]);
   const [state, setState] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const handleClick = (name) => {
     toast(`"${name}" is my favourite dish`);
-    setState(true);
+    setState(!state);
   };
   useEffect(() => {
     fetch("http://localhost:5000/recipeDetails")
@@ -23,7 +24,6 @@ const ChefDetails = () => {
   }, []);
 
   const chefDetails = useLoaderData();
-
 
   //   chef details here
 
