@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children: [
       {
         path:"/",
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
         element: <Blog></Blog>
       },
       {
-        path:"/chefDetails/:id",
+        path:"/chefRecipes/:id",
         element:<ChefDetails></ChefDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/chefDetails/${params.id}`)
       }

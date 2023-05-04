@@ -3,7 +3,6 @@ import { FaThumbsUp } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ChefSection = ({ data }) => {
-  console.log(data);
   const { chef_img, experience, name, numbers_of_recipe,_id } = data;
   return (
     <div>
@@ -32,7 +31,7 @@ const ChefSection = ({ data }) => {
             <p className="flex items-center text-sm font-bold">
               <FaThumbsUp className="mr-1" /> likes:10,345
             </p>
-            <Link to={`/chefDetails/${_id}`}>
+            <Link to={`/chefRecipes/${_id}`}>
             <button className="bg-red-500 hover:bg-red-200 duration-200 text-white hover:text-red-600 text-sm font-bold px-3 py-1 rounded">
               View Recipe
             </button>

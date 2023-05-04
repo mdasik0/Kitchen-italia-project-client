@@ -2,7 +2,7 @@ import React from "react";
 
 const MainHeader = () => {
   return (
-    <div className="md:pb-20 md:pt-10 px-3 mx-0 md:mx-28">
+    <div className="md:pb-20 md:pt-10 px-10 mx-0 md:mx-28">
       <div className="flex md:flex-row flex-col justify-between items-center ">
         <div
           style={{ lineHeight: "60px" }}

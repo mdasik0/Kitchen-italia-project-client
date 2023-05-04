@@ -36,13 +36,13 @@ const ExtraSection2 = () => {
           <h3 className="text-4xl font-extrabold text-slate-700 mb-10">
             Join Us on <br /> a Culinary Adventure
           </h3>
-          <p className="text-white mb-10 text-sm text-bold leading-5">
-            "Welcome to <div
+          <div className="text-white mb-10 text-sm text-bold leading-5">
+            "Welcome to <p
             id="logo"
             className="text-red-500 inline-block mb-2 text-lg md:text-xl font-bold"
           >
             Kitchen italia
-          </div> !!! We're so glad you're here.{" "}
+          </p> !!! We're so glad you're here.{" "}
             <br />
             <br />
             Our mission is simple: to help you become a confident, creative, and
@@ -70,7 +70,7 @@ const ExtraSection2 = () => {
             <br />
             Thank you for joining us on this culinary journey. Let's get
             cooking!
-          </p>
+          </div>
           <span style={{ fontFamily: "Dancing Script, cursive" }} className="text-4xl font-bold text-white">MD Asik khan</span>
         </div>
       </div>
