@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         {
           path:"/chefRecipes/:id",
           element:<PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/chefDetails/${params.id}`)
+          loader: ({params}) => fetch(`https://server-asik20khan18-gmailcom.vercel.app/chefDetails/${params.id}`)
         },
         {
           path:"/signup",

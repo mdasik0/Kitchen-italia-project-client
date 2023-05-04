@@ -8,7 +8,7 @@ const MainPage = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/chefDetails")
+    fetch("https://server-asik20khan18-gmailcom.vercel.app/chefDetails")
       .then((res) => res.json())
       .then((data) => setData(data));
   }, []);

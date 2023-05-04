@@ -23,7 +23,7 @@ const ExtraSection1 = () => {
       <div className="grid gap-10 md:grid-cols-3 grid-cols-1 ">
         {/* card 1 */}
         <div className="relative md:my-0 my-16">
-          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/public/transparent.png" alt="" />
+          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/transparent.png" alt="" />
           <div className="bg-slate-200 pt-36 rounded-lg text-center p-10 box-border">
             <h4 className="font-extrabold text-3xl mb-3">Insalata Caprese</h4>
             <p className="text-slate-500 font-bold text-sm mb-6">
@@ -41,7 +41,7 @@ const ExtraSection1 = () => {
           </div>
         </div>
         <div className="relative md:my-0 my-16">
-          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/public/transparent2.png" alt="" />
+          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/transparent2.png" alt="" />
           <div className="bg-slate-200 pt-36 rounded-lg text-center p-10 box-border">
             <h4 className="font-extrabold text-3xl mb-3">broccoli e formaggio</h4>
             <p className="text-slate-500 font-bold text-sm mb-6">
@@ -59,7 +59,7 @@ const ExtraSection1 = () => {
           </div>
         </div>
         <div className="relative md:my-0 my-16">
-          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/public/transparent3.png" alt="" />
+          <img className="w-48 h-48 absolute -top-16 right-16 md:right-20 border-8 border-white rounded-full" src="/transparent3.png" alt="" />
           <div className="bg-slate-200 pt-36 rounded-lg text-center p-10 box-border">
             <h4 className="font-extrabold text-3xl mb-3">Pollo Avocado</h4>
             <p className="text-slate-500 font-bold text-sm mb-6">
