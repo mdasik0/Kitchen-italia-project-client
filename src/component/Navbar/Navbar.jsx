@@ -1,9 +1,20 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { Link, NavLink } from "react-router-dom";
-import { FaAlignRight, FaAlignJustify } from "react-icons/fa";
+import { FaAlignRight, FaAlignJustify,FaSignOutAlt } from "react-icons/fa";
+import { AuthContext } from "../providers/AuthProvider/AuthProvider";
 
 const Navbar = () => {
+  const { user, logout } = useContext(AuthContext);
+  
+  if(user){
+    const {photoURL} = user;
+    console.log(photoURL)
+
+  }
+  const handleLogout = () => {
+    logout();
+  };
   const [open, setOpen] = useState(false);
   return (
     <div>
@@ -14,7 +25,7 @@ const Navbar = () => {
           </div>
         </Link>
         <ul
-          className={`flex md:flex-row flex-col md:bg-transparent font-bold bg-red-100 absolute md:static duration-500 rounded-lg md:rounded-none text-right md:text-center w-full md:w-fit py-3 md:py-0 ${
+          className={`flex md:flex-row flex-col items-center md:bg-transparent font-bold bg-red-100 absolute md:static duration-500 rounded-lg md:rounded-none text-right md:text-center w-full md:w-fit py-3 md:py-0 ${
             open ? "top-14" : "-top-96"
           }`}
         >
@@ -42,21 +53,32 @@ const Navbar = () => {
               Sign up
             </NavLink>
           </li>
+          <li>
+            {
+              user && <img title={user.displayName} className="w-10 rounded-full h-10" src={user.photoURL} alt="" />
+            }
+          </li>
+
           <li className="hover:bg-red-200 md:mr-0 mr-6 px-3 rounded-full duration-500">
-            <NavLink
-              to="/signin"
-              className={({ isActive }) => (isActive ? "active" : "")}
-            >
-              Sign in
-            </NavLink>
+            {user ? (
+                //  <p onClick={handleLogout}>Log Out</p>
+                 <FaSignOutAlt title="logout" onClick={handleLogout} ></FaSignOutAlt>
+            ) : (
+              <NavLink
+                to="/signin"
+                className={({ isActive }) => (isActive ? "active" : "")}
+              >
+                Sign in
+              </NavLink>
+            )}
           </li>
         </ul>
         <div onClick={() => setOpen(!open)} className="md:hidden ml-3 my-2 ">
           <span className="duration-500">
             {open == true ? (
-                <FaAlignJustify className="h-6 w-6 text-red-500" />
-                ) : (
-                <FaAlignRight className="h-6 w-6 text-red-500" />
+              <FaAlignJustify className="h-6 w-6 text-red-500" />
+            ) : (
+              <FaAlignRight className="h-6 w-6 text-red-500" />
             )}
           </span>
         </div>

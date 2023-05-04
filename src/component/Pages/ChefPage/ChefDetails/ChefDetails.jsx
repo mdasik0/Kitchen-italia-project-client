@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { FaThumbsUp, FaHeart } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
@@ -9,19 +9,20 @@ import { ColorRing } from "react-loader-spinner";
 
 const ChefDetails = () => {
   // recipe data here
+
   const [recipeData, setRecipeData] = useState([]);
   const [state, setState] = useState(true);
-  const [loading, setLoading] = useState(false);
 
-  const handleClick = (name) => {
-    toast(`"${name}" is my favourite dish`);
-    setState(!state);
-  };
   useEffect(() => {
     fetch("http://localhost:5000/recipeDetails")
       .then((res) => res.json())
       .then((data) => setRecipeData(data));
   }, []);
+
+  const handleClick = (name) => {
+    toast(`"${name}" is my favourite dish`);
+    setState(!state);
+  };
 
   const chefDetails = useLoaderData();
 
