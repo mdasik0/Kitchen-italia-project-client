@@ -34,10 +34,15 @@ const ExtraSection2 = () => {
       >
         <div className="md:pb-10 md:pt-10 px-3 mx-0 md:mx-28">
           <h3 className="text-4xl font-extrabold text-slate-700 mb-10">
-            Join Us on <br /> br a Culinary Adventure
+            Join Us on <br /> a Culinary Adventure
           </h3>
           <p className="text-white mb-10 text-sm text-bold leading-5">
-            "Welcome to our cooking recipe website! We're so glad you're here.{" "}
+            "Welcome to <div
+            id="logo"
+            className="text-red-500 inline-block mb-2 text-lg md:text-xl font-bold"
+          >
+            Kitchen italia
+          </div> !!! We're so glad you're here.{" "}
             <br />
             <br />
             Our mission is simple: to help you become a confident, creative, and

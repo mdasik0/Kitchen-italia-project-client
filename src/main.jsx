@@ -6,6 +6,7 @@ import ErrorPage from "./component/ErrorPage/ErrorPage";
 import Main from "./component/main/Main";
 import MainPage from "./component/Pages/MainPage/MainPage";
 import Blog from "./component/Blog/Blog";
+import ChefDetails from "./component/Pages/ChefPage/ChefDetails/ChefDetails";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path:"/blog",
         element: <Blog></Blog>
+      },
+      {
+        path:"/chefDetails/:id",
+        element:<ChefDetails></ChefDetails>
       }
     ]
   },
